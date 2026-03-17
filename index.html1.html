@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>University Result Portal</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding-top:120px;
+}
+
+input{
+padding:12px;
+font-size:18px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+background:#22c55e;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+#loading,#fail,#prank{
+display:none;
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>University Result Portal</h1>
+
+<p>Enter Roll Number</p>
+
+<input type="text" id="roll" placeholder="Roll Number">
+
+<br><br>
+
+<button onclick="checkResult()">Check Result</button>
+
+<div id="loading">Checking Result...</div>
+
+<div id="fail" style="color:red;font-size:40px;">❌ FAIL ❌</div>
+
+<div id="prank">
+<h2>😂😂😂</h2>
+<h2>ABHI TIME HAI DHURANDHAR DEKHLO PEHLE</h2>
+
+<img src="https://media.giphy.com/media/10JhviFuU2gWD6/giphy.gif" width="300">
+</div>
+
+<script>
+
+function checkResult(){
+
+let roll = document.getElementById("roll").value;
+
+if(roll == ""){
+alert("Pehle Roll Number daal bhai 😅");
+return;
+}
+
+document.getElementById("loading").style.display="block";
+
+setTimeout(function(){
+document.getElementById("loading").style.display="none";
+document.getElementById("fail").style.display="block";
+},2000);
+
+setTimeout(function(){
+document.getElementById("prank").style.display="block";
+},4000);
+
+}
+
+</script>
+
+</body>
+</html>
